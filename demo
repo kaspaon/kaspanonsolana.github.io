@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Join the Lottery Draw: Win ETH, BNB, AVAX!</title>
+    <meta name="description" content=""/>
+    <link rel="icon" href="https://lottery.tokenator.app/uploads/images/pinclipart.png">
+
+            <link rel="alternate" hreflang="en" href="https://lottery.tokenator.app/en"/>
+            <link rel="alternate" hreflang="de" href="https://lottery.tokenator.app/de"/>
+            <link rel="alternate" hreflang="fr" href="https://lottery.tokenator.app/fr"/>
+            <link rel="alternate" hreflang="ar" href="https://lottery.tokenator.app/ar"/>
+            <link rel="alternate" hreflang="zh" href="https://lottery.tokenator.app/zh"/>
+            <link rel="alternate" hreflang="ru" href="https://lottery.tokenator.app/ru"/>
+            <link rel="alternate" hreflang="tr" href="https://lottery.tokenator.app/tr"/>
+    
+    <!-- Favicon-->
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://lottery.tokenator.app/backend/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet"/>
+    <link href="https://lottery.tokenator.app/assets/css/styles.css" rel="stylesheet"/>
+    <link href="https://lottery.tokenator.app/assets/css/jquery.countdown.css" rel="stylesheet"/>
+
+    <script src="https://lottery.tokenator.app/assets/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://lottery.tokenator.app/assets/js/web3.min.js" type="text/javascript"></script>
+    <script src="https://lottery.tokenator.app/assets/js/jquery.countdown.min.js" type="text/javascript"></script>
+
+
+</head>
+<body data-theme="dark">
+
+
+<!-- Navigation-->
+<section class="bg-light">
+
+    <div class="modal fade" id="Select_Chain" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                                                    <div class="col-lg-6 mb-2">
+                               <button class="btn btn-secondary w-100 select-chain" type="button" data-chain="40">
+                                   <h6 class="card-title my-auto"><img
+                                               src="https://lottery.tokenator.app/uploads/images/products/binance-sc-testnet.png"
+                                               class="img-fluid rounded-start me-1" width="25"> Binance SC - Testnet                                   </h6>
+                               </button>
+                            </div>
+                                                    <div class="col-lg-6 mb-2">
+                               <button class="btn btn-secondary w-100 select-chain" type="button" data-chain="43">
+                                   <h6 class="card-title my-auto"><img
+                                               src="https://lottery.tokenator.app/uploads/images/products/ropsten-test-network.png"
+                                               class="img-fluid rounded-start me-1" width="25"> Ropsten Test Network                                   </h6>
+                               </button>
+                            </div>
+                                                    <div class="col-lg-6 mb-2">
+                               <button class="btn btn-secondary w-100 select-chain" type="button" data-chain="46">
+                                   <h6 class="card-title my-auto"><img
+                                               src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                               class="img-fluid rounded-start me-1" width="25"> Avalanche Fuji Testnet                                   </h6>
+                               </button>
+                            </div>
+                                                    <div class="col-lg-6 mb-2">
+                               <button class="btn btn-secondary w-100 select-chain" type="button" data-chain="47">
+                                   <h6 class="card-title my-auto"><img
+                                               src="https://lottery.tokenator.app/uploads/images/products/polygon-testnet-mumbai.png"
+                                               class="img-fluid rounded-start me-1" width="25"> Polygon Testnet                                   </h6>
+                               </button>
+                            </div>
+                                                    <div class="col-lg-6 mb-2">
+                               <button class="btn btn-secondary w-100 select-chain" type="button" data-chain="49">
+                                   <h6 class="card-title my-auto"><img
+                                               src="https://lottery.tokenator.app/uploads/images/products/heco-chain-testnet.png"
+                                               class="img-fluid rounded-start me-1" width="25"> Heco Chain Testnet                                   </h6>
+                               </button>
+                            </div>
+                                                    <div class="col-lg-6 mb-2">
+                               <button class="btn btn-secondary w-100 select-chain" type="button" data-chain="51">
+                                   <h6 class="card-title my-auto"><img
+                                               src="https://lottery.tokenator.app/uploads/images/products/fantom-testnet.png"
+                                               class="img-fluid rounded-start me-1" width="25"> Fantom Testnet                                   </h6>
+                               </button>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container px-4 px-lg-0">
+
+            <div class="col-md-7 col-12 mb-lg-0 mb-3">
+                                    <a class="navbar-brand hover" href="https://lottery.tokenator.app/en">
+                        <img src="https://lottery.tokenator.app/uploads/images/lottery.png" class="img-responsive"
+                             alt="Lottery"
+                             title="Lottery" width="150">
+                    </a>
+                            </div>
+
+            <div class="col-md-3 col-12 text-center mb-lg-0 mb-2">
+                <button type="button" class="btn text-dark w-100" data-bs-toggle="modal" data-bs-target="#Select_Chain">
+                    <h6 class="card-title my-auto"><img
+                                src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                class="img-fluid rounded-start me-1" width="25"> Avalanche Fuji Testnet</h6>
+                </button>
+            </div>
+
+            <div class="col-md-1 col-5 text-center mb-lg-0 mb-2 d-block">
+                <select class="form-control text-center selectLang" style="cursor: pointer;">
+                                            <option value="en" selected>
+                            EN                        </option>
+                                            <option value="de" >
+                            DE                        </option>
+                                            <option value="fr" >
+                            FR                        </option>
+                                            <option value="ar" >
+                            AR                        </option>
+                                            <option value="zh" >
+                            ZH                        </option>
+                                            <option value="ru" >
+                            RU                        </option>
+                                            <option value="tr" >
+                            TR                        </option>
+                                    </select>
+            </div>
+
+            <div class="col-md-1 col-5 mb-lg-0 mb-2 mx-lg-1 mx-0">
+                <input type="checkbox" class="form-check-input d-none" id="darkSwitch">
+                <label class="custom-control-label w-100" for="darkSwitch">
+                    <div class="btn btn-dark w-100" id="darkButton">
+                        <i class="bi-moon-stars me-1"></i>
+                    </div>
+                </label>
+            </div>
+
+
+        </div>
+    </nav><div class="modal fade" id="Buy_Tickets" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title"><i
+                            class="bi bi-ticket-perforated text-go"></i> Buy Tickets</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="OrderForm">
+                <div class="modal-body">
+                    <small>How Many Tickets?</small>
+                    <div class="input-group input-group-lg">
+                        <input type="number" class="form-control text-center" value="1" min="1"
+                               aria-describedby="inputGroup-sizing-lg" name="quantity" id="quantity"
+                               data-one="0.1">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Total</span>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-warning text-dark quantitybtn" value="25">
+                                    25
+                                </button>
+                                <button type="button" class="btn btn-outline-warning text-dark quantitybtn" value="50">
+                                    50
+                                </button>
+                                <button type="button" class="btn btn-outline-warning text-dark quantitybtn" value="100">
+                                    100
+                                </button>
+                            </div>
+                            <p class="text-dark">1 Ticket:
+                                <b>0.1 AVAX</b></p>
+                            <h6 class="text-center mb-0">You Pay:</h6>
+                            <h1 class="fw-bold text-center mb-0"><b class="total">0.5</b> <img
+                                        src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                        class="img-fluid rounded-start mb-2" width="35"></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <input type="hidden" name="product" value="46">
+                    <input type="hidden" name="language" value="en">
+                    <input type="hidden" name="txid" value="" id="txid">
+                    <input type="hidden" name="sender" value="" id="sender">
+                    <button class="btn btn-lg btn-go w-100" type="submit" id="OrderNow" data-loading="Please Wait.." data-metamask="MetaMask Not Installed."><i
+                                class="bi bi-ticket-perforated"></i> Buy Tickets</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container py-5 pb-0  px-4 px-lg-0 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
+            <div class="col-lg-12 text-center w-100">
+
+                <h3 class="fw-light mb-0">Join the Lottery;</h3>
+                <p class="h1 fw-bold mb-1 text-go" style="font-size: 5rem;">500<img
+                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                            class="img-fluid rounded-start ms-2 mb-2" width="55"></p>
+                <h3 class="mb-0">Win the Prizes</h3>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn text-dark my-4 mb-5 " data-bs-toggle="modal"
+                                data-bs-target="#Buy_Tickets">
+                            <h1 class="wiggle fw-bold" style="cursor: pointer;font-size: 3rem;"><i
+                                        class="bi bi-ticket-perforated text-go"></i> Buy Tickets                            </h1>
+                        </button>
+
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container py-5 pb-0  px-4 px-lg-0 mt-2">
+        <div class="row  justify-content-center">
+
+            <div class="col-lg-8">
+
+                <h2 class="fw-light mb-3 text-center"><i class="bi bi-arrow-down-right-square text-go"></i> Get your tickets now!</h2>
+
+                <div class="card">
+                    <div class="card-header h5">
+                        <div class="row">
+                            <div class="col-lg-6 text-start">Current Draw | <b class="text-warning">#7767</b></div>
+                            <div class="col-lg-6 text-end">Draw                                : 10/12/2023 17:45</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 my-auto text-center">
+                                <p class="h4 fw-light">Prize Pool:</p>
+                                <p class="h1 fw-bold mb-0" style="font-size: 4rem;">500<img
+                                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                            class="img-fluid rounded-start ms-2 mb-2" width="55"></p>
+                                <hr>
+                                <ul id="example" class="p-0 m-0">
+                                    <li><span class="days">00</span>
+                                        <p class="days_text">Day</p></li>
+                                    <li class="seperator">:</li>
+                                    <li><span class="hours">00</span>
+                                        <p class="hours_text">Hour</p></li>
+                                    <li class="seperator">:</li>
+                                    <li><span class="minutes">00</span>
+                                        <p class="minutes_text">Minute</p></li>
+                                    <li class="seperator">:</li>
+                                    <li><span class="seconds">00</span>
+                                        <p class="seconds_text">Seconds</p></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+
+                                <ol class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto fw-bold">
+                                            DIGITS MATCHED                                        </div>
+                                        <span class="fw-bold text-end">PRIZE POOL ALLOCATION</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <i class="bi bi-circle-fill text-success"></i> Matches first 1                                        </div>
+                                        <span class="badge bg-success rounded-pill">2%</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <i class="bi bi-circle-fill text-warning"></i> Matches first 2                                        </div>
+                                        <span class="badge bg-warning text-dark rounded-pill">3%</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <i class="bi bi-circle-fill text-info"></i> Matches first 3                                        </div>
+                                        <span class="badge bg-info rounded-pill">5%</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <i class="bi bi-circle-fill text-primary"></i> Matches first 4                                        </div>
+                                        <span class="badge bg-primary rounded-pill">10%</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <i class="bi bi-circle-fill text-danger"></i> Matches first 5                                        </div>
+                                        <span class="badge bg-danger rounded-pill">20%</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <i class="bi bi-circle-fill text-success"></i> Matches first 6                                        </div>
+                                        <span class="badge bg-success rounded-pill">40%</span>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button type="button" class="btn text-dark" data-bs-toggle="modal"
+                                data-bs-target="#Buy_Tickets">
+                            <h3 class="fw-bold my-auto" style="cursor: pointer;font-size: 1.5rem;"><i
+                                        class="bi bi-ticket-perforated text-go wiggle"></i> Buy Your Tickets Now                            </h3>
+                        </button>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+<div class="container py-5 pb-0  px-4 px-lg-0 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
+        <div class="col-lg-12 text-center w-100">
+            <button class="btn btn-go btn-lg fw-bold shadow" type="button" id="ConnectWallet" data-lang="en"><i class="bi bi-ticket-perforated-fill"></i> Check Your Tickets</button>
+        </div>
+    </div>
+</div>
+
+    <div class="container py-5 pb-0  px-4 px-lg-0 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
+            <div class="col-lg-12 text-center w-100">
+
+                <h2 class="fw-light mb-3"><i
+                            class="bi bi-check-circle-fill text-go"></i> Finished Rounds</h2>
+
+                <div class="accordion" id="accordionExample">
+
+                                                <div class="accordion-item mb-2">
+                                <h2 class="accordion-header" id="h-7761">
+                                    <button class="accordion-button "
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c-7761"
+                                            aria-expanded="true"
+                                            aria-controls="c-7761">
+                                        <div class="row w-100 fw-bold">
+                                            <div class="col-lg-3 my-auto text-dark">Round:
+                                                #7761<br>Drawn                                                : 09/12/2023 17:45                                            </div>
+                                            <div class="col-lg-6 text-center">
+
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">4</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">6</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">4</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">3</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">6</span>
+                                                
+                                            </div>
+                                                                                            <div class="col-lg-3 text-end my-auto"><h5><span
+                                                                class="badge bg-go">Latest</span>
+                                                    </h5>
+                                                </div>
+                                                                                    </div>
+                                    </button>
+                                </h2>
+                                <div id="c-7761"
+                                     class="accordion-collapse collapse show"
+                                     aria-labelledby="h-7761"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-dark">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p class="h4 fw-light mb-0">Prize Pool:</p>
+                                                <p class="h1 fw-bold mb-0">500 <img
+                                                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                            class="img-fluid rounded-start mb-2" width="35"></p>
+                                                <p class="mb-3">Total Number of Tickets                                                    : 0</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 6</p>
+                                                <h3 class="mb-0 fw-bold">200                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 5</p>
+                                                <h3 class="mb-0 fw-bold">100                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 4</p>
+                                                <h3 class="mb-0 fw-bold">50                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 3</p>
+                                                <h3 class="mb-0 fw-bold">25                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 2</p>
+                                                <h3 class="mb-0 fw-bold">15                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 1</p>
+                                                <h3 class="mb-0 fw-bold">10                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="accordion-item mb-2">
+                                <h2 class="accordion-header" id="h-7755">
+                                    <button class="accordion-button collapsed"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c-7755"
+                                            aria-expanded="false"
+                                            aria-controls="c-7755">
+                                        <div class="row w-100 fw-bold">
+                                            <div class="col-lg-3 my-auto text-dark">Round:
+                                                #7755<br>Drawn                                                : 08/12/2023 17:45                                            </div>
+                                            <div class="col-lg-6 text-center">
+
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">1</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">0</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">4</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                
+                                            </div>
+                                                                                    </div>
+                                    </button>
+                                </h2>
+                                <div id="c-7755"
+                                     class="accordion-collapse collapse "
+                                     aria-labelledby="h-7755"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-dark">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p class="h4 fw-light mb-0">Prize Pool:</p>
+                                                <p class="h1 fw-bold mb-0">500 <img
+                                                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                            class="img-fluid rounded-start mb-2" width="35"></p>
+                                                <p class="mb-3">Total Number of Tickets                                                    : 0</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 6</p>
+                                                <h3 class="mb-0 fw-bold">200                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 5</p>
+                                                <h3 class="mb-0 fw-bold">100                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 4</p>
+                                                <h3 class="mb-0 fw-bold">50                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 3</p>
+                                                <h3 class="mb-0 fw-bold">25                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 2</p>
+                                                <h3 class="mb-0 fw-bold">15                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 1</p>
+                                                <h3 class="mb-0 fw-bold">10                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="accordion-item mb-2">
+                                <h2 class="accordion-header" id="h-7749">
+                                    <button class="accordion-button collapsed"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c-7749"
+                                            aria-expanded="false"
+                                            aria-controls="c-7749">
+                                        <div class="row w-100 fw-bold">
+                                            <div class="col-lg-3 my-auto text-dark">Round:
+                                                #7749<br>Drawn                                                : 07/12/2023 17:30                                            </div>
+                                            <div class="col-lg-6 text-center">
+
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">6</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">3</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">0</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                
+                                            </div>
+                                                                                    </div>
+                                    </button>
+                                </h2>
+                                <div id="c-7749"
+                                     class="accordion-collapse collapse "
+                                     aria-labelledby="h-7749"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-dark">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p class="h4 fw-light mb-0">Prize Pool:</p>
+                                                <p class="h1 fw-bold mb-0">500 <img
+                                                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                            class="img-fluid rounded-start mb-2" width="35"></p>
+                                                <p class="mb-3">Total Number of Tickets                                                    : 0</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 6</p>
+                                                <h3 class="mb-0 fw-bold">200                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 5</p>
+                                                <h3 class="mb-0 fw-bold">100                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 4</p>
+                                                <h3 class="mb-0 fw-bold">50                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 3</p>
+                                                <h3 class="mb-0 fw-bold">25                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 2</p>
+                                                <h3 class="mb-0 fw-bold">15                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 1</p>
+                                                <h3 class="mb-0 fw-bold">10                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="accordion-item mb-2">
+                                <h2 class="accordion-header" id="h-7743">
+                                    <button class="accordion-button collapsed"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c-7743"
+                                            aria-expanded="false"
+                                            aria-controls="c-7743">
+                                        <div class="row w-100 fw-bold">
+                                            <div class="col-lg-3 my-auto text-dark">Round:
+                                                #7743<br>Drawn                                                : 06/12/2023 17:30                                            </div>
+                                            <div class="col-lg-6 text-center">
+
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">6</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">9</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">6</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">4</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">1</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">1</span>
+                                                
+                                            </div>
+                                                                                    </div>
+                                    </button>
+                                </h2>
+                                <div id="c-7743"
+                                     class="accordion-collapse collapse "
+                                     aria-labelledby="h-7743"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-dark">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p class="h4 fw-light mb-0">Prize Pool:</p>
+                                                <p class="h1 fw-bold mb-0">500 <img
+                                                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                            class="img-fluid rounded-start mb-2" width="35"></p>
+                                                <p class="mb-3">Total Number of Tickets                                                    : 0</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 6</p>
+                                                <h3 class="mb-0 fw-bold">200                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 5</p>
+                                                <h3 class="mb-0 fw-bold">100                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 4</p>
+                                                <h3 class="mb-0 fw-bold">50                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 3</p>
+                                                <h3 class="mb-0 fw-bold">25                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 2</p>
+                                                <h3 class="mb-0 fw-bold">15                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 1</p>
+                                                <h3 class="mb-0 fw-bold">10                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="accordion-item mb-2">
+                                <h2 class="accordion-header" id="h-7737">
+                                    <button class="accordion-button collapsed"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c-7737"
+                                            aria-expanded="false"
+                                            aria-controls="c-7737">
+                                        <div class="row w-100 fw-bold">
+                                            <div class="col-lg-3 my-auto text-dark">Round:
+                                                #7737<br>Drawn                                                : 05/12/2023 17:15                                            </div>
+                                            <div class="col-lg-6 text-center">
+
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">1</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">0</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">8</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">1</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">6</span>
+                                                                                                    <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle">1</span>
+                                                
+                                            </div>
+                                                                                    </div>
+                                    </button>
+                                </h2>
+                                <div id="c-7737"
+                                     class="accordion-collapse collapse "
+                                     aria-labelledby="h-7737"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-dark">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p class="h4 fw-light mb-0">Prize Pool:</p>
+                                                <p class="h1 fw-bold mb-0">500 <img
+                                                            src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                            class="img-fluid rounded-start mb-2" width="35"></p>
+                                                <p class="mb-3">Total Number of Tickets                                                    : 0</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 6</p>
+                                                <h3 class="mb-0 fw-bold">200                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 5</p>
+                                                <h3 class="mb-0 fw-bold">100                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 4</p>
+                                                <h3 class="mb-0 fw-bold">50                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 3</p>
+                                                <h3 class="mb-0 fw-bold">25                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 2</p>
+                                                <h3 class="mb-0 fw-bold">15                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <p class="mb-0">Match all 1</p>
+                                                <h3 class="mb-0 fw-bold">10                                                    <img src="https://lottery.tokenator.app/uploads/images/products/avalanche-fuji-testnet.png"
+                                                         class="img-fluid rounded-start mb-2" width="25"></h3>
+                                                <p>0 Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+<div class="container py-5 pb-0  px-4 px-lg-0 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
+        <div class="col-lg-12 text-center w-100">
+
+            <h1 class="text-go mb-3"><i class="bi bi-joystick"></i> How to Play</h1>
+            <b class="mb-2">If the digits on your tickets match the winning numbers in the correct order, you win a portion of the prize pool.<br>Simple!</b>
+
+            <div class="row mt-2 row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle fw-bold">1</span>
+                            <h5 class="card-title mt-2">Buy Tickets</h5>
+                            <p class="card-text">We have adjusted the prices very cheap so that you can buy dozens of tickets at once!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle fw-bold">2</span>
+                            <h5 class="card-title mt-2">Wait for the Draw</h5>
+                            <p class="card-text">After you buy your ticket, wait for the draw.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="shadow bg-go px-3 pb-1 fs-1 text-white rounded-circle fw-bold">3</span>
+                            <h5 class="card-title mt-2">Check for Prizes</h5>
+                            <p class="card-text">Once the round’s over, come back to the page and check to see if you’ve won!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div><footer class="py-2">
+
+    <div class="container">
+        <footer class="py-3 my-4">
+
+                            <ul class="nav justify-content-center text-center">
+                                            <li class="nav-item">
+                            <a href="https://lottery.tokenator.app/en/user-agreement-p-45" class="nav-link px-2 text-warning">User Agreement</a>
+                        </li>
+                                            <li class="nav-item">
+                            <a href="https://lottery.tokenator.app/en/about-us-p-46" class="nav-link px-2 text-warning">About Us</a>
+                        </li>
+                                            <li class="nav-item">
+                            <a href="https://lottery.tokenator.app/en/contact-p-47" class="nav-link px-2 text-warning">Contact</a>
+                        </li>
+                                    </ul>
+            
+
+        </footer>
+    </div>
+</footer>
+</section>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="https://lottery.tokenator.app/backend/libs/sweetalert2/sweetalert2.min.js"></script>
+<script src="https://lottery.tokenator.app/assets/js/app.js"></script>
+<script>
+    $(function () {
+        $('.selectLang').on('change', function () {
+            window.location = "https://lottery.tokenator.app/" + $(this).val();
+        });
+
+
+        var nextyear = '12/10/2023 17:45:03' ;
+
+        $('#example').countdown({
+            date: nextyear,
+            offset: +2,
+            hideOnComplete: true
+        }, function (container) {
+
+        });
+    });
+
+</script>
+</body>
+</html>
